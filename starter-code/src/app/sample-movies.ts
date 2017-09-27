@@ -1,4 +1,17 @@
-[
+interface Movie {
+  id: number
+  title: string
+  poster: string
+  synopsis: string
+  genres: Array<string>
+  year: number
+  director: string
+  actors: Array<string>
+  hours: Array<string>
+  room: number
+}
+
+const movies:Array<Movie> =[
   {
     id: 1,
     title: "The Shawshank Redemption",
@@ -16,8 +29,14 @@
       "William Sadler",
       "Clancy Brown",
       "Gil Bellows"
-    ]
-  }, {
+    ],
+    hours: [
+      "Wednesday 19:30, 22:30",
+      "Friday 18:30, 21:30, 23:00"
+    ],
+    room: 1
+  },
+  {
     id: 2,
     title: "The Godfather",
     poster: "https://i.imgur.com/Uzvny9I.jpg",
@@ -34,8 +53,14 @@
       "Richard S. Castellano",
       "Robert Duvall",
       "Sterling Hayden"
-    ]
-  }, {
+    ],
+    hours: [
+      "Wednesday 19:00, 22:00",
+      "Friday 18:00, 21:00, 23:30"
+    ],
+    room: 2
+  },
+  {
     id: 3,
     title: "The Godfather Part II",
     poster: "https://i.imgur.com/abJNkWI.jpg",
@@ -52,8 +77,14 @@
       "Robert De Niro",
       "John Cazale",
       "Talia Shire"
-    ]
-  }, {
+    ],
+    hours: [
+      "Wednesday 19:30, 22:30",
+      "Friday 18:30, 21:30, 23:00"
+    ],
+    room: 3
+  },
+  {
     id: 4,
     title: "The Dark Knight",
     poster: "https://i.imgur.com/3jLPB46.jpg",
@@ -70,8 +101,13 @@
       "Michael Caine",
       "Maggie Gyllenhaal",
       "Gary Oldman"
-    ]
-  }, {
+    ],
+    hours: [
+      "Wednesday 19:00, 22:00",
+      "Friday 18:00, 21:00, 23:30"
+    ],
+    room: 4
+  },
   {
     id: 5,
     title: "Schindler's List",
@@ -89,6 +125,13 @@
       "Caroline Goodall",
       "Jonathan Sagall",
       "Embeth Davidtz"
-    ]
+    ],
+    hours: [
+      "Wednesday 19:30, 22:30",
+      "Friday 18:30, 21:30, 23:00"
+    ],
+    room: 5
   }
 ]
+
+export default movies
