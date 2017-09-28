@@ -11,12 +11,12 @@ import { Movie } from '../sample-movies'
 export class MyMovieComponent implements OnInit {
   movieId: Number
   movie:Movie
-  constructor(private route: ActivatedRoute, private cinema: CinemaService) {
-    this.movie = cinema.getMovie(this.movieId)
-  }
+  
+  constructor(private route: ActivatedRoute, private cinema: CinemaService) { }
 
   ngOnInit() {
     this.route.params
       .subscribe((params) => this.movieId = Number(params['id']))
+    this.movie = this.cinema.getMovie(this.movieId)
   }
 }
