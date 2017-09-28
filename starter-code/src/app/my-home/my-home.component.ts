@@ -11,11 +11,8 @@ export class MyHomeComponent implements OnInit {
   movies:Array<Movie>
   constructor(private cinema: CinemaService) {
     this.movies = cinema.getMovies()
-
   }
 
   ngOnInit() {
-    console.log(this.movies)
   }
-
 }
