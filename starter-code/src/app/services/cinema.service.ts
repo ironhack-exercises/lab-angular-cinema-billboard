@@ -1,18 +1,6 @@
 import { Injectable } from '@angular/core';
 import movies from '../sample-movies'
-
-interface Movie {
-  id: number
-  title: string
-  poster: string
-  synopsis: string
-  genres: Array<string>
-  year: number
-  director: string
-  actors: Array<string>
-  hours: Array<string>
-  room: number
-}
+import { Movie } from '../sample-movies'
 
 @Injectable()
 export class CinemaService {
@@ -29,5 +17,4 @@ export class CinemaService {
   getMovie(id:number):Movie{
     return this.movies.filter(m => m.id==id)[0]
   }
-
 }
